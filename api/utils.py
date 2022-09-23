@@ -31,8 +31,6 @@ class YandexDisc:
             "path": new_file_name
         }
         response = requests.post(url=url, headers=self.headers, params=params)
-        # print(response.status_code)
-        # print(response.json())
         return response.status_code, response.json()
 
     def check_file(self, file_name):
